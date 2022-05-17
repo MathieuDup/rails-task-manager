@@ -1,0 +1,12 @@
+<h2><%= @task.title %></h2>
+<p><%= @task.details %></p>
+<ul style="list-style:none; padding: 5px;">
+  <%if @task.completed%>
+    <li><input type="checkbox", checked>The task is complete</li>
+  <%else%>
+    <li><input type="checkbox">The task is not complete</li>
+  <%end%>
+</ul>
+
+<%= link_to "Back to tasks", tasks_path %>
+<%= link_to "Edit task", task_edit_path(@task)%>
